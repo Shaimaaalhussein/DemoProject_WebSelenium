@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="myLong" value="35.5017761"/>
+  <parameter name="myLocation" value="Beirut, Lebanon"/>
+  <parameter name="myCountry" value="lebanon"/>
+  <parameter name="myLat" value="33.8937919"/>
+  <test name="Test">
+    <parameter name="myLong" value="35.5017761"/>
+    <parameter name="myLocation" value="Beirut, Lebanon"/>
+    <parameter name="myCountry" value="lebanon"/>
+    <parameter name="myLat" value="33.8937919"/>
+    <classes>
+      <class name="tests.LocationPagePermissionTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <parameter name="myLong" value="35.5017761"/>
+    <parameter name="myLocation" value="Beirut, Lebanon"/>
+    <parameter name="myCountry" value="lebanon"/>
+    <parameter name="myLat" value="33.8937919"/>
+    <classes>
+      <class name="tests.LocationPagePermissionTest">
+        <methods>
+          <include name="testWhenAddLocationThenPassSucessfully"/>
+          <include name="testWhenAdminWithNoDeletePermissionThenDeleteActionHidden"/>
+          <include name="setup"/>
+          <include name="initUtlities"/>
+          <include name="testWhenEditLocationThenPassSuccessfully"/>
+        </methods>
+      </class> <!-- tests.LocationPagePermissionTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
